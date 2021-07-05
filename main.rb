@@ -1,5 +1,5 @@
-require_relative './CharacterFactory.rb'
-require_relative './Game.rb'
+require_relative './lib/CharacterFactory.rb'
+require_relative './lib/Game.rb'
 
 def start_game
     char1 = create_char("Jin Sakuragi", 200, 100)
