@@ -1,5 +1,6 @@
-require_relative './Character.rb'
+require_relative './Character'
+require_relative './CharacterWithSword'
 
-def create_char(name, hp, attack_dmg)
-    return Character.new(name, hp, attack_dmg)
+def create_char(name, hit_point, attack_dmg)
+  Character.new(name, hit_point, attack_dmg)
 end
