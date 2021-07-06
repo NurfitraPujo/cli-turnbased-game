@@ -2,6 +2,10 @@
 
 Implementing CLI Turnbased Game using ruby
 
+## dependecies
+`ruby version : 3.0.1` 
+`dependencies : none`
+
 ## install
 
 ```bash 
