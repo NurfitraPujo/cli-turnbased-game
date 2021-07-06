@@ -9,20 +9,14 @@ class Game
 
   def player_attacking(attacker, attacked)
     attacker.attack(attacked)
-  end
-
-  def check_player_health
-    char1 = @characters[0]
-    char2 = @characters[1]
-    if char1.hp.zero?
-      game_finished(char2, char1)
-    elsif char2.hp.zero?
-      game_finished(char1, char2)
+    if attacked.die?
+      game_finished(attacker, attacked)
+    else
+      attacked.to_s
     end
   end
 
-  def game_finished(winner, loser)
-    puts "#{loser.name} is dead."
+  def game_finished(winner, _loser)
     puts "Long live #{winner.name}!"
     @is_finished = true
   end
