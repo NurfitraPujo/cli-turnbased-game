@@ -6,7 +6,7 @@ class Hero < Character
     deflect_chance < 5
   end
 
-  def heal_allies(ally)
+  def heal(ally)
     print_healing_event(ally)
     ally.hp += 20
   end
