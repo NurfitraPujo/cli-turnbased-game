@@ -19,8 +19,7 @@ class Game
   def enemy_attacking
     @enemies.each do |enemy|
       enemy.attack(hero)
-
-      puts "#{@hero.name} dies." && break if @hero.died?
+      break if @hero.died?
     end
   end
 
