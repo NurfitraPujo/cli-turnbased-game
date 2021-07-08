@@ -12,16 +12,19 @@ class Character
   end
 
   def attack(other_player)
-    puts "#{@name} attacks #{other_player.name} with #{@attack_dmg} damage"
+    print_attacking_event(other_player)
     other_player.receive_damage(@attack_dmg)
-    puts "#{other_player.name} dies." if other_player.die?
+  end
+
+  def print_attacking_event(other_player)
+    puts "#{@name} attacks #{other_player.name} with #{@attack_dmg} damage"
   end
 
   def to_s
-    puts "#{@name} has #{@hp} hit points and #{@attack_dmg} attack damage"
+    "#{@name} has #{@hp} hit points and #{@attack_dmg} attack damage"
   end
 
-  def die?
+  def died?
     @hp <= 0
   end
 end
