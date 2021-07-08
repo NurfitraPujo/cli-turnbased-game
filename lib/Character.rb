@@ -12,12 +12,12 @@ class Character
   end
 
   def attack(other_player)
-    print_attacking_event(other_player)
+    puts attacking_event(other_player)
     other_player.receive_damage(@attack_dmg)
   end
 
-  def print_attacking_event(other_player)
-    puts "#{@name} attacks #{other_player.name} with #{@attack_dmg} damage"
+  def attacking_event(other_player)
+    "#{@name} attacks #{other_player.name} with #{@attack_dmg} damage"
   end
 
   def to_s
