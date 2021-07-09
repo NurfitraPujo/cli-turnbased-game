@@ -17,3 +17,8 @@ git clone git@github.com:NurfitraPujo/cli-turnbased-game.git
 ```bash
 ruby main.rb
 ```
+## testing
+
+```bash
+bundle exec rspec
+```
